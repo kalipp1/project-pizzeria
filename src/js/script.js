@@ -142,7 +142,7 @@ const select = {
             const option = param.options[optionId];
             console.log(optionId, option);
             const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
-            const optionImage = thisProduct.imageWrapper.querySelector(optionId);
+            const optionImage = thisProduct.imageWrapper.querySelector('.'+paramId+'-'+optionId);
             if(optionSelected){
               if(!option.default){
                 price += option.price;
@@ -154,11 +154,13 @@ const select = {
             }
             if(optionImage){
               if(optionSelected){
-                
+                optionImage.classList.add('active');
+              }else{
+                optionImage.classList.remove('active');
               }
             }
           }
-      }
+        }
 
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
