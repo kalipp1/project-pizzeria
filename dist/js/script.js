@@ -184,7 +184,11 @@ const select = {
       console.log('AmountWidget: ', thisWidget);
       console.log('constructor arguments: ', element);
       thisWidget.getElements(element);
-      thisWidget.setValue(thisWidget.input.value);
+      if(thisWidget.input.value){
+        thisWidget.setValue(thisWidget.input.value);
+      }else{
+        thisWidget.setValue(settings.amountWidget.defaultValue);
+      }
       thisWidget.initActions();
     }
     getElements(element){
