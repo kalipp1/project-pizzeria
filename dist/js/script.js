@@ -330,6 +330,7 @@ const select = {
 
       thisCart.dom.wrapper = element;
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
+      thisCart.dom.productList = thisCart.dom.wrapper.querySelector(select.cart.productList);
     }
     initActions(){
       const thisCart = this;
@@ -339,9 +340,15 @@ const select = {
       });
     }
     add(menuProduct){
-      // const thisCart = this;
+      const thisCart = this;
 
       console.log('adding product: ', menuProduct);
+      const generatedHTML = templates.cartProduct(menuProduct);
+      // generate HTML based on template 
+      const generatedDOM = utils.createDOMFromHTML(generatedHTML);
+      // create element using utils.createElementFromHTML
+      thisCart.dom.productList.appendChild(generatedDOM);
+      thisCart.products.push(menuProduct);
     }
   }
 
