@@ -86,9 +86,6 @@ class Cart {
         elem.innerHTML = thisCart.totalPrice;
         }
         thisCart.dom.deliveryFee.innerHTML = deliveryFee;
-        console.log('totalNumber: ', totalNumber);
-        console.log('subtotalPrice: ', subtotalPrice);
-        console.log('totalPrice: ', thisCart.totalPrice);
     }else if(subtotalPrice == 0){
       thisCart.totalPrice = 0;
       for(const elem of thisCart.dom.totalPrice){
@@ -107,7 +104,6 @@ class Cart {
   }
   remove(cartProduct) {
     const thisCart = this;
-    console.log('Removing product:', cartProduct);
 
     const index = thisCart.products.indexOf(cartProduct);
     if (index !== -1) {

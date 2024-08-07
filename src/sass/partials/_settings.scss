@@ -1,4 +1,18 @@
 /* Variables */
+%h1-placeholder {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+%h2-placeholder {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+%h3-placeholder {
+  font-size: 1.2em;
+  font-weight: normal;
+}
 $color-warning: #f6b93b;
 $color-danger: #e55039;
 $color-success: #78e08f;
