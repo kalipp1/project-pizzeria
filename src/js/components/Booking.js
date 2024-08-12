@@ -9,6 +9,7 @@ class Booking {
         thisBooking.render(element);
         thisBooking.initWidgets();
         thisBooking.getData();
+        thisBooking.sendOrder();
     }
 
     getData(){
@@ -220,21 +221,23 @@ class Booking {
     sendOrder(){
         const thisBooking = this;
         const url = settings.db.url + '/' + settings.db.bookings;
+        console.log(url);
         const payload = {
-          date: thisBooking.dom.date,
-          hour: thisBooking.dom.hours,
-          table: thisBooking.dom.tableId,
-          duration: thisBooking.dom.hoursAmount,
-          ppl: thisBooking.dom.peopleAmount,
+          date: thisBooking.dom.date.value,
+          hour: thisBooking.dom.hours.value,
+          table: parseInt(thisBooking.dom.wrapper.querySelector('.table-picked').dataset.table),
+          duration: thisBooking.dom.hoursAmount.value,
+          ppl: thisBooking.dom.peopleAmount.value,
           starters: [],
-          phone: thisBooking.dom.phone,
-          address: thisBooking.dom.address,
+          phone: thisBooking.dom.phone.value,
+          address: thisBooking.dom.address.value,
         };
         for(let checkbox of thisBooking.dom.starters){
             if(checkbox.checked){
                 payload.starters.push(checkbox.value);
             }
         }
+        console.log(payload);
         const options = {
           method: 'POST',
           headers: {
