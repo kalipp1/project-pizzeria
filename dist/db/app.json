@@ -278,20 +278,67 @@
       ]
     },
     {
-      "date": {},
-      "hour": {},
-      "duration": {},
-      "ppl": {},
+      "table": 2,
       "starters": [],
+      "phone": "",
+      "address": "",
       "id": 3
     },
     {
-      "date": {},
-      "hour": {},
-      "duration": {},
-      "ppl": {},
+      "table": 2,
       "starters": [],
+      "phone": "",
+      "address": "",
       "id": 4
+    },
+    {
+      "date": "2024-08-13",
+      "hour": "21:00",
+      "table": 2,
+      "duration": 3,
+      "ppl": 3,
+      "starters": [],
+      "phone": "",
+      "address": "",
+      "id": 5
+    },
+    {
+      "date": "2024-08-13",
+      "hour": "20:30",
+      "table": 2,
+      "duration": 4,
+      "ppl": 4,
+      "starters": [],
+      "phone": "47217512765",
+      "address": "maksdajsdjafsa",
+      "id": 6
+    },
+    {
+      "date": "2024-08-13",
+      "hour": "20:30",
+      "table": 2,
+      "duration": 4,
+      "ppl": 4,
+      "starters": [
+        "water",
+        "bread"
+      ],
+      "phone": "47217512765",
+      "address": "maksdajsdjafsa",
+      "id": 7
+    },
+    {
+      "date": "2024-08-13",
+      "hour": "20:30",
+      "table": 2,
+      "duration": 4,
+      "ppl": 4,
+      "starters": [
+        "water"
+      ],
+      "phone": "47217512765",
+      "address": "maksdajsdjafsa",
+      "id": 8
     }
   ]
 }

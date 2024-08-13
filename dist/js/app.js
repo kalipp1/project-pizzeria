@@ -19,6 +19,14 @@
           break;
         }
       }
+
+      const mainNav = document.querySelector(select.nav.wrapper);
+      console.log(pageMatchingHash);
+      if(pageMatchingHash === 'homepage'){
+        mainNav.classList.add('hidden');
+      }else{
+        mainNav.classList.remove('hidden');
+      }
       thisApp.activatePage(pageMatchingHash);
 
       for(let link of thisApp.navLinks){
@@ -31,7 +39,11 @@
 
           // run thisApp.activatePage with that id
           thisApp.activatePage(id);
-
+          if(id === 'homepage'){
+            mainNav.classList.add('hidden');
+          }else{
+            mainNav.classList.remove('hidden');
+          }
           // change URL hash
           window.location.hash = '#/' + id;
         });

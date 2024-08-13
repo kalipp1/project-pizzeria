@@ -199,6 +199,8 @@
     margin: ($base-size * 4) auto;
   }
 
-  .picked {
-    color: yellowgreen;
+  .floor-plan .object.picked {
+    background-color: yellowgreen;
+    border: 3px solid white;
+    // color: yellowgreen;
   }

@@ -6,12 +6,15 @@ class AmountWidget extends BaseWidget{
       const thisWidget = this;
 
       thisWidget.getElements(element);
-      // if(thisWidget.dom.input.value){
-      //   thisWidget.setValue(thisWidget.dom.input.value);
-      // }else{
-      //   thisWidget.setValue(settings.amountWidget.defaultValue);
-      // }
+      if(thisWidget.dom.input.value){
+        // thisWidget.dom.input.value = thisWidget.dom.input.value;
+        thisWidget.setValue(thisWidget.dom.input.value);
+      }else{
+        thisWidget.dom.input.value = settings.amountWidget.defaultValue;
+      }
       thisWidget.initActions();
+
+      // thisWidget.renderValue();
 
       // console.log('AmountWidget: ', thisWidget);
     }
